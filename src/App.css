@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+
+::selection {
+  background: #2e003e !important;
+}
+
+#title {
+  color: white !important;
+  font-size: 40px;
+  margin-bottom: 0;
+  padding-top: 1%;
+  font-family: 'Kalam', cursive;
+}
+
+textarea.ant-input:hover {
+  border: none;
+}
+
+textarea.ant-input:focus {
+  border: none;
+}
+
+.app {
+  text-align: center;
+  height: auto;
+  min-height: 100vh;
+  background: rgb(253, 45, 99);
+  background: linear-gradient(0deg, rgba(253, 45, 99, 1) 0%, rgba(61, 35, 82, 1) 52%);
+}
+
+#Editor,
+#Preview {
+  margin: 1%;
+  word-wrap: break-word;
+  background-color: #e4dcf1;
+  text-align: left;
+  border: 3px solid rgba(61, 35, 82, 1);
+  font-size: 17px;
+}
+
+textarea.ant-input {
+  background-color: #e4dcf1;
+  min-height: 510px !important;
+  max-height: 510px;
+  font-size: 17px;
+  resize: none !important;
+  transition: none !important;
+  border: none;
+}
+
+.markText {
+  box-sizing: border-box;
+  padding-left: 2%;
+  overflow: auto;
+  min-height: 510px;
+  max-height: 510px;
+  resize: none;
+}
+
+.blockTitle {
+  background-color: #8874a3;
+  font-size: 25px;
+  box-sizing: border-box;
+  padding-left: 2%;
+  font-family: 'Kalam', cursive;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid #555;
+}
+
+@media (max-width:767px) {
+  #title{
+    font-size: 32px;
+  }
+  .blockTitle{
+    font-size:22px;
+  }
+  .ant-row {
+    flex-direction: column !important;
+  }
+
+  .ant-col-12 {
+    min-width: 97%;
+  }
+}
+
+@media (max-width:290px) {
+  #title{
+    font-size: 24px;
+  }
+  .blockTitle{
+    font-size:20px;
+  }
+  .ant-col-12{
+    min-width: 95%;
+  }
+}
