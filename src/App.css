@@ -4,6 +4,20 @@
   background: #2e003e !important;
 }
 
+#body {
+  height: 85%;
+}
+
+.ant-row {
+  display:flex !important;
+  height: 100% !important;
+}
+
+.ant-col-12 {
+  height: 100% !important;
+}
+
+
 #title {
   color: white !important;
   font-size: 40px;
@@ -22,8 +36,7 @@ textarea.ant-input:focus {
 
 .app {
   text-align: center;
-  height: auto;
-  min-height: 100vh;
+  height: 100vh;
   background: rgb(253, 45, 99);
   background: linear-gradient(0deg, rgba(253, 45, 99, 1) 0%, rgba(61, 35, 82, 1) 52%);
 }
@@ -36,24 +49,28 @@ textarea.ant-input:focus {
   text-align: left;
   border: 3px solid rgba(61, 35, 82, 1);
   font-size: 17px;
+  height: 35rem;
 }
 
 textarea.ant-input {
   background-color: #e4dcf1;
-  min-height: 510px !important;
-  max-height: 510px;
+  /* min-height: 100% !important; */
+  /* max-height: 95% !important; */
+  height: 32rem !important;
   font-size: 17px;
   resize: none !important;
   transition: none !important;
   border: none;
+  min-height: 510px;
 }
 
 .markText {
+  /* position: absolute; */
   box-sizing: border-box;
   padding-left: 2%;
   overflow: auto;
   min-height: 510px;
-  max-height: 510px;
+  height: 32rem !important;
   resize: none;
 }
 
@@ -73,12 +90,14 @@ th {
 }
 
 @media (max-width:767px) {
-  #title{
+  #title {
     font-size: 32px;
   }
-  .blockTitle{
-    font-size:22px;
+
+  .blockTitle {
+    font-size: 22px;
   }
+
   .ant-row {
     flex-direction: column !important;
   }
@@ -89,13 +108,15 @@ th {
 }
 
 @media (max-width:290px) {
-  #title{
+  #title {
     font-size: 24px;
   }
-  .blockTitle{
-    font-size:20px;
+
+  .blockTitle {
+    font-size: 20px;
   }
-  .ant-col-12{
+
+  .ant-col-12 {
     min-width: 95%;
   }
 }
