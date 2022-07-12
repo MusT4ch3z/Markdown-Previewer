@@ -2,7 +2,6 @@ import './App.css';
 import 'antd/dist/antd.css'
 import MarkedBlock from './components/marked';
 import PreviewBlock from './components/preview';
-import { Col, Row } from 'antd';
 import TextContext from './textContext';
 import { useState } from 'react';
 
@@ -14,19 +13,13 @@ function App() {
   const [text, setText] = useState(initialState);
   return (
     <div className="app">
-      <TextContext.Provider value={{ text, setText }}>
-        <h1 id="title">Markdown Previewer</h1>
-        <div id="body">
-          <Row>
-            <Col span={12}>
-              <MarkedBlock />
-            </Col>
-            <Col span={12}>
-              <PreviewBlock />
-            </Col>
-          </Row>
-        </div>
-      </TextContext.Provider>
+      <div className="container">
+        <TextContext.Provider value={{ text, setText }}>
+          <h1 id="title">Markdown Previewer</h1>
+          <MarkedBlock />
+          <PreviewBlock />
+        </TextContext.Provider>
+      </div>
     </div>
   );
 }

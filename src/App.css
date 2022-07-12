@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 
+.app {
+  text-align: center;
+  height: 100vh;
+  background: rgb(253, 45, 99);
+  background: linear-gradient(0deg, rgba(253, 45, 99, 1) 0%, rgba(61, 35, 82, 1) 52%);
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50px auto;
+  grid-template-areas: 'title title'
+    'textInput markedText';
+}
+
 ::selection {
   background: #2e003e !important;
 }
 
-#body {
-  height: 85%;
-}
-
-.ant-row {
-  display:flex !important;
-  height: 100% !important;
-}
-
-.ant-col-12 {
-  height: 100% !important;
-}
 
 
 #title {
+  grid-area: title;
   color: white !important;
   font-size: 40px;
   margin-bottom: 0;
@@ -34,11 +39,13 @@ textarea.ant-input:focus {
   border: none;
 }
 
-.app {
-  text-align: center;
-  height: 100vh;
-  background: rgb(253, 45, 99);
-  background: linear-gradient(0deg, rgba(253, 45, 99, 1) 0%, rgba(61, 35, 82, 1) 52%);
+
+#Editor {
+  grid-area: textInput;
+}
+
+#Preview {
+  grid-area: markedText;
 }
 
 #Editor,
@@ -49,28 +56,26 @@ textarea.ant-input:focus {
   text-align: left;
   border: 3px solid rgba(61, 35, 82, 1);
   font-size: 17px;
-  height: 35rem;
+  overflow: hidden;
+  max-height: 100%;
 }
 
 textarea.ant-input {
   background-color: #e4dcf1;
-  /* min-height: 100% !important; */
-  /* max-height: 95% !important; */
-  height: 32rem !important;
   font-size: 17px;
   resize: none !important;
   transition: none !important;
   border: none;
-  min-height: 510px;
+  min-height: 510px !important;
+  height: 98% !important;
 }
 
 .markText {
-  /* position: absolute; */
   box-sizing: border-box;
   padding-left: 2%;
   overflow: auto;
   min-height: 510px;
-  height: 32rem !important;
+  max-height: 95%;
   resize: none;
 }
 
@@ -98,12 +103,11 @@ th {
     font-size: 22px;
   }
 
-  .ant-row {
-    flex-direction: column !important;
-  }
-
-  .ant-col-12 {
-    min-width: 97%;
+  .container {
+    grid-template-areas: 'title'
+      'textInput'
+      'markedText';
+    grid-template-columns: 97%;
   }
 }
 
@@ -116,7 +120,7 @@ th {
     font-size: 20px;
   }
 
-  .ant-col-12 {
-    min-width: 95%;
+  .container {
+    grid-template-columns: 95%;
   }
 }
